@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.ewem.common.annotation.Excel;
 import com.ewem.common.core.domain.BaseEntityPlus;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -40,6 +41,7 @@ public class Code extends BaseEntityPlus {
 
     private Integer scanNum;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date firstScanTime;
 
     /**

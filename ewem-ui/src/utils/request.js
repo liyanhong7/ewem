@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Notification, MessageBox, Message } from 'element-ui'
 import store from '@/store'
-import { getToken } from '@/utils/auth'
+import { getToken, removeToken } from '@/utils/auth'
 import errorCode from '@/utils/errorCode'
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
@@ -58,8 +58,9 @@ service.interceptors.response.use(res => {
           confirmButtonText: '重新登录',
           cancelButtonText: '取消',
           type: 'warning'
-        }
+      }
       ).then(() => {
+        removeToken()
         store.dispatch('LogOut').then(() => {
           location.href = '/index';
         })

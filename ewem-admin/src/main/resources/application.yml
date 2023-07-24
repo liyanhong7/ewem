@@ -9,7 +9,7 @@ ewem:
   # 实例演示开关
   demoEnabled: true
   # 文件路径 示例（ Windows配置D:/ewem/uploadPath，Linux配置 /home/ewem/uploadPath）
-  profile: D:/ewem/uploadPath
+  profile: C:/Users/liyan/IdeaProjects/ewem/uploadPath
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数组计算 char 字符验证
